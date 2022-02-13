@@ -1,4 +1,4 @@
-package com.github.kaspernie;
+package com.github.kaspernie.rpgchars;
 
 public class Main {
 
