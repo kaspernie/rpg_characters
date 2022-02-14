@@ -62,6 +62,9 @@ public abstract class Hero {
                 + ", base-Strength: " + getBasePrimaryAttribute().getStrength()
                 + ", base-Dexterity: " + getBasePrimaryAttribute().getDexterity()
                 + ", base-Intelligence: " + getBasePrimaryAttribute().getIntelligence()
+                + ", total-Strength: " + getBasePrimaryAttribute().getStrength()
+                + ", total-Dexterity: " + getBasePrimaryAttribute().getDexterity()
+                + ", total-Intelligence: " + getBasePrimaryAttribute().getIntelligence()
                 + '}';
     }
 }
