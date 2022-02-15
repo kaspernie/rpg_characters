@@ -1,5 +1,7 @@
 package com.github.kaspernie.rpgchars;
 
+import java.util.HashMap;
+
 public class Warrior extends Hero {
     // warrior begin: 5,2,1
     // warrior levelup: 3,2,1

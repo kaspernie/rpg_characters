@@ -6,7 +6,7 @@ public class primaryAttribute {
     private int dexterity;
     private int intelligence;
 
-    // Constructor for creating heroes
+    // Constructor for creating attributes
     public primaryAttribute(int strength, int dexterity, int intelligence) {
         this.strength = strength;
         this.dexterity = dexterity;
