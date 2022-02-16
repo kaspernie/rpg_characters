@@ -19,7 +19,7 @@ public class Main {
         // warrior.setEquipment("Weapon","Sword");
 
 /*
-        Ranger ranger = new Ranger("Ranger Lee");
+        Ranger ranger = new Ranger("Cordell W. T. Ranger");
         System.out.println(ranger);
         // test level-up ranger
         ranger.levelUp();
@@ -33,7 +33,7 @@ public class Main {
         System.out.println(rogue);
 
 
-        Mage mage = new Mage("Gandalf Mage");
+        Mage mage = new Mage("Merlin Mage");
         System.out.println(mage);
         // test level-up Mage
         mage.levelUp();

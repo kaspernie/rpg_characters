@@ -1,5 +1,3 @@
 package com.github.kaspernie.rpgchars;
 
-public enum weaponType {
-    axe, bow, dagger, hammer, staff, sword, wand
-}
+public enum weaponType {AXE, BOW, DAGGER, HAMMER, STAFF, SWORD, WAND}

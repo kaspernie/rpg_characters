@@ -21,4 +21,36 @@ class HeroTest {
     @Test
     void setLevel() {
     }
+
+    @Test
+    void levelUp() {
+    }
+
+    @Test
+    void getEquipment() {
+    }
+
+    @Test
+    void setEquipment() {
+    }
+
+    @Test
+    void getBasePrimaryAttribute() {
+    }
+
+    @Test
+    void setBasePrimaryAttribute() {
+    }
+
+    @Test
+    void getTotalPrimaryAttribute() {
+    }
+
+    @Test
+    void setTotalPrimaryAttribute() {
+    }
+
+    @Test
+    void testToString() {
+    }
 }
