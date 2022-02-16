@@ -19,6 +19,7 @@ public abstract class Hero {
         this.equipment = new HashMap<Slot, Item>(); // begin with empty equipment
     }
 
+
     // Get and set name
     public String getName() {
         return name;
@@ -45,9 +46,7 @@ public abstract class Hero {
         return equipment;
     }
 
-    public void setEquipment(HashMap<Slot, Item> equipment) {
-        this.equipment = equipment;
-    }
+    public abstract void setEquipment(Slot slot, Item item) throws Exception;
 
     // Get and set primary attributes
     public primaryAttribute getBasePrimaryAttribute() {
@@ -75,7 +74,7 @@ public abstract class Hero {
                 + ", total-Strength: " + getTotalPrimaryAttribute().getStrength()
                 + ", total-Dexterity: " + getTotalPrimaryAttribute().getDexterity()
                 + ", total-Intelligence: " + getTotalPrimaryAttribute().getIntelligence()
-                + ", equipment=" + equipment
-                + '}';
+                + ",\n      equipment=" + equipment.toString()
+                + "\n}";
     }
 }

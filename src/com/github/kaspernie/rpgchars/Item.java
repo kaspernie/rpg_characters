@@ -4,7 +4,7 @@ public abstract class Item {
     protected String name;
     protected int requiredLevel;
     protected Slot slot;
-
+    
     public Item(String name, int requiredLevel, Slot slot) {
         this.name = name;
         this.requiredLevel = requiredLevel;
@@ -16,6 +16,7 @@ public abstract class Item {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -24,6 +25,7 @@ public abstract class Item {
     public int getRequiredLevel() {
         return requiredLevel;
     }
+
     public void setRequiredLevel(int requiredLevel) {
         this.requiredLevel = requiredLevel;
     }
@@ -32,6 +34,7 @@ public abstract class Item {
     public Slot getSlot() {
         return slot;
     }
+
     public void setSlot(Slot slot) {
         this.slot = slot;
     }
