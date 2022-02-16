@@ -8,7 +8,7 @@ public class Mage extends Hero {
     static int strengthUp = 1, dexterityUp = 1, intelligenceUp = 5;
 
     public Mage(String name) {
-        super(name, 1, new primaryAttribute(strength1, dexterity1, intelligence1));
+        super(name, new primaryAttribute(strength1, dexterity1, intelligence1));
     }
 
     @Override

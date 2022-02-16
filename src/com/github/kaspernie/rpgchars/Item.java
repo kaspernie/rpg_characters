@@ -3,9 +3,9 @@ package com.github.kaspernie.rpgchars;
 public abstract class Item {
     protected String name;
     protected int requiredLevel;
-    protected String slot;
+    protected Slot slot;
 
-    public Item(String name, int requiredLevel, String slot) {
+    public Item(String name, int requiredLevel, Slot slot) {
         this.name = name;
         this.requiredLevel = requiredLevel;
         this.slot = slot;
@@ -29,10 +29,10 @@ public abstract class Item {
     }
 
     // getters and setters for slot
-    public String getSlot() {
+    public Slot getSlot() {
         return slot;
     }
-    public void setSlot(String slot) {
+    public void setSlot(Slot slot) {
         this.slot = slot;
     }
 }

@@ -11,12 +11,12 @@ public abstract class Hero {
     protected HashMap<Slot, Item> equipment;
 
     // Constructor for creating heroes
-    public Hero(String name, int level, primaryAttribute basePrimaryAttribute) {
+    public Hero(String name, primaryAttribute basePrimaryAttribute) {
         this.name = name;
-        this.level = level;
+        this.level = 1;
         this.basePrimaryAttribute = basePrimaryAttribute;
         this.totalPrimaryAttribute = basePrimaryAttribute; // todo: handle initial totalPrimaryAttribute
-        this.equipment = null;
+        this.equipment = new HashMap<Slot, Item>(); // begin with empty equipment
     }
 
     // Get and set name
@@ -41,6 +41,13 @@ public abstract class Hero {
         this.level++;
     }
 
+    public HashMap<Slot, Item> getEquipment() {
+        return equipment;
+    }
+
+    public void setEquipment(HashMap<Slot, Item> equipment) {
+        this.equipment = equipment;
+    }
 
     // Get and set primary attributes
     public primaryAttribute getBasePrimaryAttribute() {
@@ -65,12 +72,10 @@ public abstract class Hero {
         return "Hero {"
                 + "name: '" + name + '\''
                 + ", level: " + level
-                + ", base-Strength: " + getBasePrimaryAttribute().getStrength()
-                + ", base-Dexterity: " + getBasePrimaryAttribute().getDexterity()
-                + ", base-Intelligence: " + getBasePrimaryAttribute().getIntelligence()
                 + ", total-Strength: " + getTotalPrimaryAttribute().getStrength()
                 + ", total-Dexterity: " + getTotalPrimaryAttribute().getDexterity()
                 + ", total-Intelligence: " + getTotalPrimaryAttribute().getIntelligence()
+                + ", equipment=" + equipment
                 + '}';
     }
 }

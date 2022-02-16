@@ -8,7 +8,7 @@ public class Rogue extends Hero {
     static int strengthUp = 1, dexterityUp = 4, intelligenceUp = 1;
 
     public Rogue(String name) {
-        super(name, 1, new primaryAttribute(strength1, dexterity1, intelligence1));
+        super(name, new primaryAttribute(strength1, dexterity1, intelligence1));
     }
 
     @Override

@@ -8,7 +8,7 @@ public class Ranger extends Hero {
     static int strengthUp = 1, dexterityUp = 5, intelligenceUp = 1;
 
     public Ranger(String name) {
-        super(name, 1, new primaryAttribute(strength1, dexterity1, intelligence1));
+        super(name, new primaryAttribute(strength1, dexterity1, intelligence1));
     }
 
     @Override

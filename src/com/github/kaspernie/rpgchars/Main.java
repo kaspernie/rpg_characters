@@ -1,5 +1,7 @@
 package com.github.kaspernie.rpgchars;
 
+import java.util.HashMap;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,8 +14,11 @@ public class Main {
         // test level-up warrior again
         warrior.levelUp();
         System.out.println(warrior);
+        warrior.levelUp();
+        System.out.println(warrior);
+        // warrior.setEquipment("Weapon","Sword");
 
-
+/*
         Ranger ranger = new Ranger("Ranger Lee");
         System.out.println(ranger);
         // test level-up ranger
@@ -33,6 +38,6 @@ public class Main {
         // test level-up Mage
         mage.levelUp();
         System.out.println(mage);
-
+*/
     }
 }

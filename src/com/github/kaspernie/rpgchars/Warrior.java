@@ -10,7 +10,7 @@ public class Warrior extends Hero {
     static int strengthUp = 3, dexterityUp = 2, intelligenceUp = 1;
 
     public Warrior(String name) {
-        super(name, 1, new primaryAttribute(strength1, dexterity1, intelligence1));
+        super(name, new primaryAttribute(strength1, dexterity1, intelligence1));
     }
 
     @Override
