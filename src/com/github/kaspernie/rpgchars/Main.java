@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // test new warrior
         Warrior warrior = new Warrior("Arnold Warrior");
         System.out.println(warrior);
@@ -16,7 +16,15 @@ public class Main {
         System.out.println(warrior);
         warrior.levelUp();
         System.out.println(warrior);
-        // warrior.setEquipment("Weapon","Sword");
+        // test equip weapon
+        Weapon mySword = new Weapon("Needle", 1, weaponType.SWORD, 0.9, 5.0);
+        warrior.setEquipment(Slot.WEAPON, mySword);
+        System.out.println(warrior);
+        // test equip armor
+        Armor myMail = new Armor("Shiny mail", 1, Slot.BODY, armorType.MAIL, new primaryAttribute(1, 1, 1));
+        warrior.setEquipment(Slot.BODY, myMail);
+        System.out.println(warrior);
+
 
 /*
         Ranger ranger = new Ranger("Cordell W. T. Ranger");

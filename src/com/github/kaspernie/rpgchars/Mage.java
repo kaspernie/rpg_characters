@@ -1,5 +1,6 @@
 package com.github.kaspernie.rpgchars;
 
+
 public class Mage extends Hero {
     // mage begin: 1,1,8
     // mage levelup: 1,1,5
@@ -22,5 +23,15 @@ public class Mage extends Hero {
                 intelligenceInit + (level - 1) * intelligenceUp
         ));
     }
+
+    @Override
+    public void setEquipment(Slot slot, Item item) throws Exception {
+        // This should throw a custom error if Hero class or level is incompatible with item
+        if (false) {
+            throw new Exception("oh no");
+        }
+        this.equipment.put(slot, item);
+    }
 }
+
 

@@ -9,4 +9,22 @@ public class Armor extends Item {
         this.armorType = armorType;
         this.armorAttribute = armorAttribute;
     }
+
+    public armorType getArmorType() {
+        return armorType;
+    }
+
+    public void setArmorType(armorType armorType) {
+        this.armorType = armorType;
+    }
+
+    public primaryAttribute getArmorAttribute() {
+        return armorAttribute;
+    }
+
+    @Override
+    public String toString() {
+        return "\n          {Slot: " + getSlot() + ", WeaponType: " + getArmorType() + ", Name: "
+                + getName() + ", Required Level: " + getRequiredLevel() + "} ";
+    }
 }

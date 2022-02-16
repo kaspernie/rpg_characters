@@ -24,5 +24,16 @@ public class Warrior extends Hero {
                 intelligenceInit + (level - 1) * intelligenceUp
         ));
     }
+
+    @Override
+    public void setEquipment(Slot slot, Item item) throws Exception {
+        // This should throw a custom error if Hero class or level is incompatible with item
+        if (false) {
+            throw new Exception("oh no");
+        }
+        this.equipment.put(slot, item);
+    }
+
+
 }
 
