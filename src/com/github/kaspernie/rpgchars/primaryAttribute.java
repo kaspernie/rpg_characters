@@ -17,6 +17,7 @@ public class primaryAttribute {
     public int getStrength() {
         return strength;
     }
+
     public void setStrength(int strength) {
         this.strength = strength;
     }
@@ -25,6 +26,7 @@ public class primaryAttribute {
     public int getDexterity() {
         return dexterity;
     }
+
     public void setDexterity(int dexterity) {
         this.dexterity = dexterity;
     }
@@ -33,7 +35,17 @@ public class primaryAttribute {
     public int getIntelligence() {
         return intelligence;
     }
+
     public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
+    }
+
+    @Override
+    public String toString() {
+        return "primaryAttribute{" +
+                "strength=" + strength +
+                ", dexterity=" + dexterity +
+                ", intelligence=" + intelligence +
+                '}';
     }
 }

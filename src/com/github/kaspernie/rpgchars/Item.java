@@ -4,7 +4,7 @@ public abstract class Item {
     protected String name;
     protected int requiredLevel;
     protected Slot slot;
-    
+
     public Item(String name, int requiredLevel, Slot slot) {
         this.name = name;
         this.requiredLevel = requiredLevel;
@@ -38,4 +38,6 @@ public abstract class Item {
     public void setSlot(Slot slot) {
         this.slot = slot;
     }
+
+    public abstract primaryAttribute getArmorAttribute();
 }

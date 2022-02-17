@@ -18,13 +18,14 @@ public class Armor extends Item {
         this.armorType = armorType;
     }
 
+    @Override
     public primaryAttribute getArmorAttribute() {
         return armorAttribute;
     }
 
     @Override
     public String toString() {
-        return "\n          {Slot: " + getSlot() + ", WeaponType: " + getArmorType() + ", Name: "
+        return "\n          {Slot: " + getSlot() + ", armorType: " + getArmorType() + ", Name: "
                 + getName() + ", Required Level: " + getRequiredLevel() + "} ";
     }
 }
