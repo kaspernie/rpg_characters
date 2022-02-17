@@ -32,6 +32,10 @@ public class Weapon extends Item {
         return getDamage() * getAttackSpeed();
     }
 
+    @Override
+    public primaryAttribute getArmorAttribute() {
+        return null;
+    }
 
     @Override
     public String toString() {

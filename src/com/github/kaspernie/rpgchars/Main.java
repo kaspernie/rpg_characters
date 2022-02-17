@@ -21,9 +21,18 @@ public class Main {
         warrior.setEquipment(Slot.WEAPON, mySword);
         System.out.println(warrior);
         // test equip armor
-        Armor myMail = new Armor("Shiny mail", 1, Slot.BODY, armorType.MAIL, new primaryAttribute(1, 1, 1));
-        warrior.setEquipment(Slot.BODY, myMail);
+        Armor myMail = new Armor("Shiny mail", 1, Slot.HEAD, armorType.MAIL, new primaryAttribute(1, -1, 0));
+        warrior.setEquipment(Slot.HEAD, myMail);
         System.out.println(warrior);
+        // test equip more armor
+        Armor myPlate = new Armor("Heavy plate", 1, Slot.BODY, armorType.PLATE, new primaryAttribute(10, -2, 0));
+        warrior.setEquipment(Slot.BODY, myPlate);
+        System.out.println(warrior);
+        // test equip another weapon
+        Weapon myAxe = new Weapon("Tomahawk", 1, weaponType.AXE, 2, 2.0);
+        warrior.setEquipment(Slot.WEAPON, myAxe);
+        System.out.println(warrior);
+
 
 
 /*

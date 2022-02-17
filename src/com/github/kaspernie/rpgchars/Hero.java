@@ -1,13 +1,13 @@
 package com.github.kaspernie.rpgchars;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public abstract class Hero {
     // todo: Hero: private or protected?
     protected String name;
     protected int level;
     protected primaryAttribute basePrimaryAttribute;
-    protected primaryAttribute totalPrimaryAttribute;
     protected HashMap<Slot, Item> equipment;
 
     // Constructor for creating heroes
@@ -15,7 +15,6 @@ public abstract class Hero {
         this.name = name;
         this.level = 1;
         this.basePrimaryAttribute = basePrimaryAttribute;
-        this.totalPrimaryAttribute = basePrimaryAttribute; // todo: handle initial totalPrimaryAttribute
         this.equipment = new HashMap<Slot, Item>(); // begin with empty equipment
     }
 
@@ -57,23 +56,32 @@ public abstract class Hero {
         this.basePrimaryAttribute = basePrimaryAttribute;
     }
 
-    // todo: handle updated totalPrimaryAttribute and calculation
+    // On-the-fly totalPrimaryAttribute calculation
     public primaryAttribute getTotalPrimaryAttribute() {
-        return basePrimaryAttribute;
-    }
+        //this.totalPrimaryAttribute = basePrimaryAttribute;
+        int totalStrength = basePrimaryAttribute.getStrength();
+        int totalDexterity = basePrimaryAttribute.getDexterity();
+        int totalIntelligence = basePrimaryAttribute.getIntelligence();
 
-    public void setTotalPrimaryAttribute(primaryAttribute totalPrimaryAttribute) {
-        this.totalPrimaryAttribute = totalPrimaryAttribute;
+        // Items that are not in a WEAPON slot must be armor
+        for (Map.Entry<Slot, Item> entry : equipment.entrySet()) {
+            if (!entry.getKey().equals(Slot.WEAPON)) {
+                totalStrength += entry.getValue().getArmorAttribute().getStrength();
+                totalDexterity += entry.getValue().getArmorAttribute().getDexterity();
+                totalIntelligence += entry.getValue().getArmorAttribute().getIntelligence();
+            }
+        }
+        return new primaryAttribute(totalStrength, totalDexterity, totalIntelligence);
     }
-
+    
     @Override
     public String toString() {
         return "Hero {"
                 + "name: '" + name + '\''
                 + ", level: " + level
-                + ", total-Strength: " + getTotalPrimaryAttribute().getStrength()
-                + ", total-Dexterity: " + getTotalPrimaryAttribute().getDexterity()
-                + ", total-Intelligence: " + getTotalPrimaryAttribute().getIntelligence()
+                + ", Strength: " + getTotalPrimaryAttribute().getStrength()
+                + ", Dexterity: " + getTotalPrimaryAttribute().getDexterity()
+                + ", Intelligence: " + getTotalPrimaryAttribute().getIntelligence()
                 + ",\n      equipment=" + equipment.toString()
                 + "\n}";
     }
